@@ -1,0 +1,29 @@
+package arrayprograms;
+
+public class fact_last_even_num {
+	static int factorial(int num) {
+		int fact=1;
+		for(int i=num;i>=1;i--) {
+			fact=fact*i;
+		}
+	         return fact;
+		}
+	static void sum_of_fact_arr(int[] arr) 
+	{
+		int sum=0;
+		for(int i=arr.length-1;i>=0;i--) {
+			if(arr[i]%2==0) {
+			sum=sum + factorial(arr[i]);
+			break;
+			}
+		}
+		System.out.println(sum);
+	}
+
+	public static void main(String[] args) {
+		int[] arr= {13,2,3,4,5,6,7,8,9};
+	     sum_of_fact_arr(arr);
+
+	}
+}
+
